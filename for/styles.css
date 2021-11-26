@@ -1,0 +1,244 @@
+/* === Remove input autofocus webkit === */
+*:focus {outline: none;}
+
+/* === ������ ��� ����� � ����� ������ === */
+body {}
+.contact_form h2, .contact_form label {font-family:Georgia, Times, "Times New Roman", serif;}
+.form_hint, .required_notification {font-size: 11px;}
+
+.contact_form {
+		width:1000px;
+	}
+@media screen and (max-width:1024px)
+{
+.contact_form {
+		width:100%;
+	}
+}
+@media screen and (max-width:240px)
+{
+.contact_form {
+		width:100%;
+	}
+}
+	.contact_form1 {
+		width:300px;
+	}
+@media screen and (max-width:240px)
+{
+.contact_form1 {
+		width:100%;
+	}
+}
+
+/* === ������ ����� === */
+.contact_form p {
+    	width:350px;
+	
+	padding:0px;
+}
+@media screen and (max-width:1330px)
+{
+.contact_form p {
+    	width:100%;
+	
+	padding:0px;
+}
+}
+@media screen and (max-width:240px) 
+{
+.contact_form p {
+    	width:100%;
+	
+	padding:0px;
+}
+}
+
+
+/* === ������ � ������������ ������ === */
+.contact_form label {
+	width:150px;
+	margin-top: 3px;
+	display:inline-block;
+	float: left;
+	padding:3px;
+}
+.contact_form input {
+	height:30px; 
+	width:320px; 
+	padding:5px 8px;
+}
+@media screen and (max-width:1330px)
+{.contact_form input {
+	height:30px; 
+	width:250px; 
+	padding:0px 8px;
+}
+}
+@media screen and (max-width:240px)
+{.contact_form input {
+	height:30px; 
+	width:100%; 
+	padding:0px 8px;
+}
+}
+.contact_form1 input {
+	height:10px; 
+	width:250px; 
+	padding:5px 8px;
+}
+.contact_form textarea {padding:8px; width:320px;}
+@media screen and (max-width:1024px)
+{
+.contact_form textarea { width:80%;}
+}
+@media screen and (max-width:240px)
+{
+.contact_form textarea {padding:8px; width:100%;}
+}
+.contact_form1 textarea {padding:8px; width:250px; height: 40px; }
+.contact_form button {margin-left:0px;}
+
+	/* ����� � ������� */
+	.contact_form input, .contact_form textarea { 
+		border:1px solid #aaa;
+		/*box-shadow: 0px 0px 30px #ccc, 0 10px 15px #eee inset;*/
+		border-radius:2px;
+		padding-right:30px;
+		-moz-transition: padding .25s; 
+		-webkit-transition: padding .25s; 
+		-o-transition: padding .25s;
+		transition: padding .25s;
+	}
+	.contact_form1 input, .contact_form1 textarea { 
+		border:1px solid #aaa;
+		box-shadow: 0px 0px 30px #ccc, 0 10px 15px #eee inset;
+		border-radius:2px;
+		padding-right:30px;
+		-moz-transition: padding .25s; 
+		-webkit-transition: padding .25s; 
+		-o-transition: padding .25s;
+		transition: padding .25s;
+	}
+	.contact_form input:focus, .contact_form textarea:focus {
+		background: #fff; 
+		border:1px solid #555; 
+		box-shadow: 0 0 3px #aaa; 
+		padding-right:70px;
+	}
+
+
+/* === HTML5  === */	
+.contact_form input:required, .contact_form textarea:required {
+	background: #fff no-repeat 98% center;
+}
+.contact_form input:required:valid, .contact_form textarea:required:valid {
+	background: #fff no-repeat 98% center;
+	box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;
+}
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid {
+	background: #fff no-repeat 98% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535
+}
+
+/* === ����� ��������� === */
+.form_hint {
+	background: #d45252;
+	border-radius: 3px 3px 3px 3px;
+	color: white;
+	margin-left:8px;
+	padding: 1px 6px;
+	z-index: 999; /* ��������� ������ ���� ��������� */
+	position: absolute; /* ���������� �����������, ���� ��������� � 2 ������ */
+	display: none;
+}
+.form_hint::before {
+	content: "\25C0";
+	color:#d45252;
+	position: absolute;
+	top:1px;
+	left:-6px;
+}
+.contact_form input:focus + .form_hint {display: inline;}
+.contact_form input:required:valid + .form_hint {background: #28921f;}
+.contact_form input:required:valid + .form_hint::before {color:#28921f;}
+	
+/* === ���������� ������ === */
+button.submit {
+width:260px;
+height:50px;
+	background-color: #884CFF;
+	background: -webkit-gradient(linear, left top, left bottom, from(#884CFF), to(#884CFF));
+	background: -webkit-linear-gradient(top, #884CFF, #884CFF);
+	background: -moz-linear-gradient(top, #884CFF, #884CFF);
+	background: -ms-linear-gradient(top, #884CFF, #884CFF);
+	background: -o-linear-gradient(top, #884CFF, #884CFF);
+	background: linear-gradient(top, #884CFF, #884CFF);
+	border: 1px solid #C591AD;
+	border-bottom: 1px solid #C591AD;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	box-shadow: inset 0 1px 0 0 #12A789;
+	-webkit-box-shadow: 0 1px 0 0 #12A789 inset ;
+	-moz-box-shadow: 0 1px 0 0 #12A789 inset;
+	-ms-box-shadow: 0 1px 0 0 #12A789 inset;
+	-o-box-shadow: 0 1px 0 0 #12A789 inset;
+	color: white;
+	font-weight: bold;
+	padding: 6px 20px;
+	text-align: center;
+	text-shadow: 0 -1px 0 #12A789;
+}
+@media screen and (max-width:1024px)
+{
+button.submit {
+width:90%;
+height:50px;
+	background-color: #884CFF;
+	background: -webkit-gradient(linear, left top, left bottom, from(#884CFF), to(#884CFF));
+	background: -webkit-linear-gradient(top, #884CFF, #884CFF);
+	background: -moz-linear-gradient(top, #884CFF, #884CFF);
+	background: -ms-linear-gradient(top, #884CFF, #884CFF);
+	background: -o-linear-gradient(top, #884CFF, #884CFF);
+	background: linear-gradient(top, #884CFF, #884CFF);
+	border: 1px solid #C591AD;
+	border-bottom: 1px solid #C591AD;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	box-shadow: inset 0 1px 0 0 #12A789;
+	-webkit-box-shadow: 0 1px 0 0 #12A789 inset ;
+	-moz-box-shadow: 0 1px 0 0 #12A789 inset;
+	-ms-box-shadow: 0 1px 0 0 #12A789 inset;
+	-o-box-shadow: 0 1px 0 0 #12A789 inset;
+	color: white;
+	font-weight: bold;
+	padding: 6px 20px;
+	text-align: center;
+	text-shadow: 0 -1px 0 #12A789;
+}
+
+
+}
+
+button.submit:hover {
+    color: #ffffff;
+	cursor: pointer; 
+}
+button.submit:active {
+	border: 1px solid #884CFF;
+	box-shadow: 0 0 10px 5px #12A789 inset; 
+	-webkit-box-shadow:0 0 10px 5px #12A789 inset ;
+	-moz-box-shadow: 0 0 10px 5px #12A789 inset;
+	-ms-box-shadow: 0 0 10px 5px #12A789 inset;
+	-o-box-shadow: 0 0 10px 5px #12A789 inset;
+	
+}
+
